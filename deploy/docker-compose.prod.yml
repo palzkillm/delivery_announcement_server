@@ -1,0 +1,9 @@
+services:
+  delivery-backend:
+    image: ghcr.io/palzkillm/delivery_announcement_server-backend:latest
+    container_name: delivery-backend
+    ports:
+      - "8500:8000"
+    environment:
+      - ENVIRONMENT=prod
+    restart: unless-stopped
